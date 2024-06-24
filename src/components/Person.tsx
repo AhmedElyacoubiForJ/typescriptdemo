@@ -4,7 +4,7 @@ interface Props {
   email: string;
   age: number;
   isMarried: boolean;
-  friends: Array<string>; // string[]
+  friends: Array<string>; // string[] // friends: Props[Person];
   country?: string;
   continent: Continent;
 }
