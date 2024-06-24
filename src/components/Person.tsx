@@ -4,6 +4,7 @@ interface Props {
   email: string;
   age: number;
   isMarried: boolean;
+  country?: string;
   friends: Array<string>; // string[]
 }
 
@@ -22,6 +23,7 @@ const Person = (props: Props) => {
       <h1>Email: {props.email}</h1>
       <h1>Age: {props.age}</h1>
       <h1>This person {props.isMarried ? "is" : "is not"} MARRIED</h1>
+      <h1>Country: {props.country}</h1>
       {props.friends.map((friend: string) => (
         <h1 key={friend}>{friend}</h1>
       ))}
