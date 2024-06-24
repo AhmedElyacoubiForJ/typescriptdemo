@@ -1,5 +1,5 @@
 import "./App.css";
-import Person from "./components/Person";
+import Person, {Continent} from "./components/Person";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         age={45}
         isMarried={true}
         friends={["John", "Jeff", "Mary"]}
+        continent={Continent.NORTH_AMERICA}
       />
     </div>
   );

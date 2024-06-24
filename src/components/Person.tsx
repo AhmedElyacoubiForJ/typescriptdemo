@@ -4,8 +4,19 @@ interface Props {
   email: string;
   age: number;
   isMarried: boolean;
-  country?: string;
   friends: Array<string>; // string[]
+  country?: string;
+  continent: Continent;
+}
+
+export enum Continent {
+    ASIA            = "Asia",
+    AFRICA          = "Africa",
+    EUROPE          = "Europe",
+    NORTH_AMERICA   = "North america",
+    SOUTH_AMERICA   = "South america",
+    AUSTRALIA       = "Australia",
+    ANTARCTICA      = "Antarctica"
 }
 
 const Person = (props: Props) => {
@@ -24,6 +35,7 @@ const Person = (props: Props) => {
       <h1>Age: {props.age}</h1>
       <h1>This person {props.isMarried ? "is" : "is not"} MARRIED</h1>
       <h1>Country: {props.country}</h1>
+      <h1>Continent: {props.continent}</h1>
       {props.friends.map((friend: string) => (
         <h1 key={friend}>{friend}</h1>
       ))}
