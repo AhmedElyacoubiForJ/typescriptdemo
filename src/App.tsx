@@ -1,10 +1,16 @@
-import React from 'react';
-import './App.css';
+import "./App.css";
+import Person from "./components/Person";
 
 function App() {
   return (
     <div className="App">
-      Hallo
+      <Person
+        name="Mike Smith"
+        email="mike.smith@gmail.com"
+        age={45}
+        isMarried={true}
+        friends={["John", "Jeff", "Mary"]}
+      />
     </div>
   );
 }
